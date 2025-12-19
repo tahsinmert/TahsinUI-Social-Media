@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/TahsinUI_full_logo.png',
-        width: 1200,
-        height: 630,
+        width: 2816,
+        height: 1536,
         alt: 'TahsinUI Logo',
       },
     ],
@@ -74,6 +74,9 @@ export const metadata: Metadata = {
     },
   },
   verification: {
+    // TODO: Replace with actual verification codes before production deployment
+    // Get Google verification code from: https://search.google.com/search-console
+    // Get Yandex verification code from: https://webmaster.yandex.com
     google: 'google-site-verification-code',
     yandex: 'yandex-verification-code',
   },
