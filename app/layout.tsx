@@ -112,6 +112,12 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://tahsinui.com" />
+        <link rel="author" href="/humans.txt" />
+        <meta name="theme-color" content="#059669" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="TahsinUI" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
