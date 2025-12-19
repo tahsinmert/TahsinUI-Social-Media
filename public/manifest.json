@@ -1,0 +1,48 @@
+{
+  "name": "TahsinUI - Sophisticated Social Media & Editorial Platform",
+  "short_name": "TahsinUI",
+  "description": "A sophisticated, minimalist social media and editorial platform built with Next.js 14, TypeScript, and Tailwind CSS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#059669",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/TahsinUI_full_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["social", "lifestyle", "news"],
+  "shortcuts": [
+    {
+      "name": "Explore",
+      "short_name": "Explore",
+      "description": "Discover trending topics and people",
+      "url": "/explore",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Stories",
+      "short_name": "Stories",
+      "description": "View stories from people you follow",
+      "url": "/stories",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Messages",
+      "short_name": "Messages",
+      "description": "Check your messages",
+      "url": "/messages",
+      "icons": [{ "src": "/favicon.png", "sizes": "96x96" }]
+    }
+  ]
+}

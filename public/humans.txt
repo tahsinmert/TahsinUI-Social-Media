@@ -1,0 +1,17 @@
+/* TEAM */
+Developer: TahsinUI Team
+Site: https://tahsinui.com
+Twitter: @tahsinui
+Location: Istanbul, Turkey
+
+/* THANKS */
+Built with Next.js 14, TypeScript, and Tailwind CSS
+Fonts from Google Fonts (Inter & Playfair Display)
+Icons from Lucide React
+Images from Unsplash
+
+/* SITE */
+Last update: 2024/12/19
+Standards: HTML5, CSS3, ES2024
+Components: React 18, Framer Motion
+Software: Next.js 14, TypeScript 5.3
