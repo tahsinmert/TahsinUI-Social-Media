@@ -18,11 +18,64 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'TahsinUI',
-  description: 'A sophisticated, minimalist blog platform with editorial design',
+  metadataBase: new URL('https://tahsinui.com'),
+  title: {
+    default: 'TahsinUI - Sophisticated Social Media & Editorial Platform',
+    template: '%s | TahsinUI'
+  },
+  description: 'A sophisticated, minimalist social media and editorial platform built with Next.js 14, TypeScript, and Tailwind CSS. Discover stories, trends, and connect with people.',
+  keywords: ['social media', 'editorial platform', 'minimalist design', 'Next.js', 'TypeScript', 'Tailwind CSS', 'blog platform', 'stories', 'trending topics'],
+  authors: [{ name: 'TahsinUI' }],
+  creator: 'TahsinUI',
+  publisher: 'TahsinUI',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: '/favicon.png',
     apple: '/favicon.png',
+    shortcut: '/favicon.png',
+  },
+  manifest: '/manifest.json',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://tahsinui.com',
+    title: 'TahsinUI - Sophisticated Social Media & Editorial Platform',
+    description: 'A sophisticated, minimalist social media and editorial platform built with Next.js 14, TypeScript, and Tailwind CSS. Discover stories, trends, and connect with people.',
+    siteName: 'TahsinUI',
+    images: [
+      {
+        url: '/TahsinUI_full_logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'TahsinUI Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TahsinUI - Sophisticated Social Media & Editorial Platform',
+    description: 'A sophisticated, minimalist social media and editorial platform built with Next.js 14, TypeScript, and Tailwind CSS.',
+    images: ['/TahsinUI_full_logo.png'],
+    creator: '@tahsinui',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code',
   },
 }
 
@@ -31,8 +84,39 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'TahsinUI',
+    description: 'A sophisticated, minimalist social media and editorial platform',
+    url: 'https://tahsinui.com',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://tahsinui.com/explore?q={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'TahsinUI',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://tahsinui.com/TahsinUI_full_logo.png'
+      }
+    }
+  }
+
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+      <head>
+        <link rel="canonical" href="https://tahsinui.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`font-sans ${inter.className} bg-slate-100`}>
         <Navbar />
         <main className="pt-12">
